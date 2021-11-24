@@ -16,11 +16,23 @@ const numeriUtente = [];
 setTimeout( () => {
     document.querySelector('.content_num').innerHTML = '';
     for(let i = 0; i < 5; i++) {
-        numeriUtente.push(parseInt(prompt('Inserisci il numero')));
+        const numUtente = parseInt(prompt('Inserisci il numero'));
+        if (numeri.includes(numUtente)) {
+            numeriUtente.push(numUtente);
+        }        
     }
-    console.log(numeriUtente);
 
-}, 3000);
+    numeriUtente.forEach((element, i) => {
+        if(i == numeriUtente.length - 1) {
+            document.querySelector('.content_num').append(element)
+        } else {
+            document.querySelector('.content_num').append(element + ',')
+        }
+    })
+    
+    
+}, 30000);
+
 
 
 
