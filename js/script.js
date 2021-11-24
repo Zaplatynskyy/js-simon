@@ -3,8 +3,15 @@
 
 const numeri = [];
 for(let i = 0; i < 5; i++) {
-    const numRandom = Math.floor(Math.random() * 100 + 1);
+    const numRandom = Math.floor(Math.random() * 99 + 1);
     numeri.push(numRandom);
+    if(i == 4) {
+        document.querySelector('.content_num').append(numRandom)
+    } else {
+        document.querySelector('.content_num').append(numRandom + ',')
+    }
 }
 
-console.log(numeri);
+setTimeout( () => {
+    document.querySelector('.content_num').innerHTML = '';
+}, 30000);
