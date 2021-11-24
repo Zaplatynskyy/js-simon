@@ -12,6 +12,16 @@ for(let i = 0; i < 5; i++) {
     }
 }
 
+const numeriUtente = [];
 setTimeout( () => {
     document.querySelector('.content_num').innerHTML = '';
-}, 30000);
+    for(let i = 0; i < 5; i++) {
+        numeriUtente.push(parseInt(prompt('Inserisci il numero')));
+    }
+    console.log(numeriUtente);
+
+}, 3000);
+
+
+
+
